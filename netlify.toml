@@ -1,6 +1,6 @@
 [build]
   command = "bun run build"
-  publish = "packages/web/dist"
+  publish = "dist"
   base = "packages/web"
 
 [dev]
