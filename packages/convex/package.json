@@ -1,0 +1,11 @@
+{
+  "name": "convex",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "convex": "^1.17.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

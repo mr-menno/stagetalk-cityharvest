@@ -1,0 +1,12 @@
+[build]
+  command = "bun run build"
+  publish = "packages/web/dist"
+  base = "packages/web"
+
+[dev]
+  command = "bun run dev"
+  port = 5173
+  framework = "vite"
+
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"

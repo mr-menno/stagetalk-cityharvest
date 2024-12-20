@@ -1,0 +1,7 @@
+{
+  "name": "stagetalk-cityharvest",
+  "private": true,
+  "workspaces": [
+	  "packages/*"
+  ]
+}
