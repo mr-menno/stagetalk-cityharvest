@@ -1,0 +1,14 @@
+{
+  "name": "shared",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@convex-dev/auth": "^0.0.77",
+    "convex": "^1.17.4"
+  }
+}
