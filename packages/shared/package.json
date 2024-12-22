@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@convex-dev/auth": "^0.0.77",
-    "convex": "^1.17.4"
+    "convex": "^1.17.4",
+    "zustand": "^5.0.2"
   }
 }
