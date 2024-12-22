@@ -28,7 +28,7 @@ function RouteComponent() {
     if (!teamId) return;
     await sendMessage({
       teamId,
-      message: "Hello, World! " + new Date().toISOString(),
+      message: message,
     });
     setMessage("");
   }
