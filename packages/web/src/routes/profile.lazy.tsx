@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { createLazyFileRoute } from "@tanstack/react-router";
+import { createLazyFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "convex/react";
 import { api } from "shared/convex/_generated/api";
 import useStagetalkStore from "shared/stagetalk-store";
@@ -15,7 +15,9 @@ function RouteComponent() {
   return (
     <div className="flex flex-col h-dvh overscroll-none">
       <div className="w-full bg-primary text-primary-foreground font-semibold p-2 flex flex-row">
-        <div className="flex-1">Stagetalk</div>
+        <Link className="flex-1" to="/messages">
+          Stagetalk
+        </Link>
       </div>
       <div className="flex flex-col flex-1 overflow-x-scroll p-4 gap-4">
         <Card>
