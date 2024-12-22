@@ -1,3 +1,4 @@
+import ScreenRegister from "@/components/screens/screen-register";
 import { useAuthActions } from "@convex-dev/auth/react";
 import { createRootRoute, Outlet } from "@tanstack/react-router";
 import {
@@ -19,7 +20,8 @@ export default function RootComponent() {
   const { signIn } = useAuthActions();
   const { isLoading, isAuthenticated } = useConvexAuth();
   const teams = useQuery(api.teams.getTeams);
-  const { setTeamId } = useStagetalkStore();
+  const user = useQuery(api.user.getMyUser);
+  const { setTeamId, setUser } = useStagetalkStore();
 
   useEffect(() => {
     if (!teams) return;
@@ -28,6 +30,11 @@ export default function RootComponent() {
       setTeamId(teams[0]._id);
     }
   }, [teams, setTeamId]);
+
+  useEffect(() => {
+    if (!user) return;
+    setUser(user);
+  }, [user, setUser]);
   /*
     const { setTeamId } = useStagetalkStore();
   const teams = useQuery(api.teams.getTeams);
@@ -58,7 +65,7 @@ export default function RootComponent() {
   return (
     <>
       <Authenticated>
-        <Outlet />
+        {teams?.length === 0 ? <ScreenRegister /> : <Outlet />}
       </Authenticated>
       <Unauthenticated>Registring device...</Unauthenticated>
       <AuthLoading>Loading...</AuthLoading>

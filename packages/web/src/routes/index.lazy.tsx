@@ -1,4 +1,4 @@
-import ScreenRegister from "@/Components/Screens/screen-register";
+import ScreenRegister from "@/components/screens/screen-register";
 import { createLazyFileRoute, Navigate } from "@tanstack/react-router";
 import { useQuery } from "convex/react";
 import { useEffect } from "react";
