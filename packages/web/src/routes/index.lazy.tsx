@@ -22,7 +22,7 @@ function Index() {
   }, [teams, setTeamId]);
 
   if (!teams) {
-    return <div>Loading Teams...</div>;
+    return <div>Loading Teams... </div>;
   }
 
   if (teams.length === 0) {
