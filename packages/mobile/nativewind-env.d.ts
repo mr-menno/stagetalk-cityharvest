@@ -1,0 +1,1 @@
+/// <referencepes="nativewind/types" /> ty

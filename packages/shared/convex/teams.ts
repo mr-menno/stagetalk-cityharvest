@@ -129,3 +129,17 @@ export const joinTeam = mutation({
     return team;
   },
 });
+
+export const getTeamByInvite = query({
+  args: {
+    inviteCode: v.string(),
+  },
+  handler: async (ctx, { inviteCode }) => {
+    const team = await ctx.db
+      .query("teams")
+      .withIndex("by_invite_code")
+      .filter((q) => q.eq(q.field("inviteCode"), inviteCode))
+      .first();
+    return team;
+  },
+})

@@ -1,0 +1,31 @@
+{
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "channel": "dev",
+      "environment": "development",
+      "env": {
+        "APP_ENV": "development",
+        "EXPO_PUBLIC_CONVEX_URL": "https://festive-opossum-400.convex.cloud"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "channel": "dev",
+      "environment": "preview",
+      "env": {
+        "APP_ENV": "preview",
+        "EXPO_PUBLIC_CONVEX_URL": "https://ardent-giraffe-634.convex.cloud"
+      }
+    },
+    "production": {
+      "channel": "prod",
+      "environment": "production",
+      "env": {
+        "APP_ENV": "production",
+        "EXPO_PUBLIC_CONVEX_URL": "https://ardent-giraffe-634.convex.cloud"
+      }
+    }
+  }
+}
