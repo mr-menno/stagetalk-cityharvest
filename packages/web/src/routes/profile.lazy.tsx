@@ -6,6 +6,7 @@ import { useQuery } from "convex/react";
 import { TriangleAlert } from "lucide-react";
 import { api } from "shared/convex/_generated/api";
 import useStagetalkStore from "shared/stagetalk-store";
+import { QRCodeSVG } from "qrcode.react";
 
 export const Route = createLazyFileRoute("/profile")({
   component: RouteComponent,
@@ -56,6 +57,13 @@ function RouteComponent() {
                   {team.inviteCode}
                 </span>
               </div>
+              {team.inviteCode && (
+                <div>
+                  <QRCodeSVG
+                    value={`https://cityharvest.stagetalk.app/register/join?invite=${team.inviteCode}`}
+                  />
+                </div>
+              )}
             </CardContent>
           </Card>
         )}
