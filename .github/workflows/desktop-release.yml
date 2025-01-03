@@ -7,13 +7,7 @@ on:
     paths:
       - '.github/workflows/desktop-release.yml'
       - 'packages/desktop/**'
-  pull_request:
-    branches:
-      - release
-    paths:
-      - '.github/workflows/desktop-release.yml'
-      - 'packages/desktop/**'
-
+  
 # This is the example from the readme.
 # On each push to the `release` branch it will create or update a GitHub release, build your app, and upload the artifacts to the release.
 
